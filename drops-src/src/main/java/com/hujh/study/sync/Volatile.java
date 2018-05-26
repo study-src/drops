@@ -1,5 +1,9 @@
 package com.hujh.study.sync;
 
+// https://blog.csdn.net/ns_code/article/details/17101369
+// https://blog.csdn.net/ns_code/article/details/17382679
+// https://www.ibm.com/developerworks/cn/java/j-jtp06197.html
+
 /**
  * 只能在有限的一些情形下使用 volatile 变量替代锁。要使 volatile 变量提供理想的线程安全，
  * 必须同时满足下面两个条件：
