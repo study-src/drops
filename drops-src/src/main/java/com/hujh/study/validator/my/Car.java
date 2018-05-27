@@ -1,4 +1,4 @@
-package com.hujh.study.validator;
+package com.hujh.study.validator.my;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -6,7 +6,13 @@ import javax.validation.constraints.Size;
 
 public class Car {
 
-    @NotNull
+	@NotNull
+	private String name;
+	
+	@CannotHaveBlank
+	private String descp;
+	
+	@NotNull
     private String manufacturer;
 
     @NotNull
@@ -16,11 +22,21 @@ public class Car {
     @Min(2)
     private int seatCount;
 
-    public Car(String manufacturer, String licencePlate, int seatCount) {
-        this.manufacturer = manufacturer;
-        this.licensePlate = licencePlate;
-        this.seatCount = seatCount;
-    }
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getDescp() {
+		return descp;
+	}
+
+	public void setDescp(String descp) {
+		this.descp = descp;
+	}
 
 	public String getManufacturer() {
 		return manufacturer;
@@ -45,6 +61,6 @@ public class Car {
 	public void setSeatCount(int seatCount) {
 		this.seatCount = seatCount;
 	}
-
-   
+    
+    
 }
